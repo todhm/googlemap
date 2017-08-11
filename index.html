@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <head>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+     <link href='css/index.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map">
+    </div>
+    <div id="right-panel">
+    <h2>Results</h2>
+    <ul id="places" data-bind="foreach:neighborData">
+    <li data-bind="text:name,click:$parent.zoomin"></li>
+    </ul>
+    </div>
+  </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAEhKVC12UstZLEbjtckg078OPlKvFBO2w"></script>
+<script type="text/javascript" src="bower_components/knockout/dist/knockout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
